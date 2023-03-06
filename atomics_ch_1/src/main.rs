@@ -5,6 +5,7 @@ fn main() {
     thread_sum_op(1..1000);
     thread_sample();
     thread_sum_op(1..10000043);
+    scope_threads()
 }
 
 fn thread_sample(){
@@ -35,6 +36,20 @@ fn thread_sample_with_vec(){
             println!("{n:?}");
         }
     }).join().unwrap();
+}
+
+fn scope_threads(){
+    let numbers = vec![1, 2, 3];
+    thread::scope(|s| {
+        s.spawn(|| {
+            println!("length: {}", numbers.len());
+        });
+        s.spawn(|| {
+            for n in &numbers{
+                println!("{n}");
+            }
+        });
+    }); 
 }
 
 fn process(){
