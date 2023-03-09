@@ -22,6 +22,23 @@ fn main() {
     tuple_sample(&("Kishore Karunakaran", 32));
 
     string_fun();
+
+    slice_sample();
+}
+
+fn slice_sample(){
+    let mut arr = [10, 20, 30, 40, 50, 60];
+    println!("Input Array = {:?}", arr);
+
+    let mut view = &arr[2..5];
+    println!("Slice = {:?}", view);
+
+    arr = arr.map(|x| x * x);
+    println!("Modified Input Array = {:?}", arr);
+
+    view = &arr[2..5];
+    println!("Modified Slice = {:?}", view);
+
 }
 
 fn array_sample(arr: &mut [i32; 10]){
@@ -32,7 +49,7 @@ fn array_sample(arr: &mut [i32; 10]){
     }
 
     //For pretty print we can use #
-    println!("Array values = {:#?}", arr)
+    println!("Array values = {:#?}", arr);
 }
 
 fn dynamic_array<const SIZE: usize>(arr: &mut [u32; SIZE]){
