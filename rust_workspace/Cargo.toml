@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "hello_rust",
+    "atomic_chapter1"
+]
