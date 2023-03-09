@@ -1,6 +1,6 @@
 fn main(){
     println!("FizzBuzz program \n");
-    for i in 1..25{
+    for i in 1..30{
         fizzbuzz(i);
     }
 }
