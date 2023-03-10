@@ -3,6 +3,9 @@ fn main(){
     for i in 1..30{
         fizzbuzz(i);
     }
+
+    sample("Varun");
+    sample("Varsha");
 }
 
 fn is_divisible(lhs: u32, rhs: u32) -> bool {
@@ -18,5 +21,13 @@ fn fizzbuzz(n: u32){
        (true, false) => println!("fizz"),
        (false, true) => println!("buzz"),
        (false, false) => println!("{n}"),  
+    }
+}
+
+fn sample(name: &str){
+    match name {
+        "Varun" => println!("Hello {name}"),
+        "Kishore" => println!("Hello {name}"),
+        _ => println!("Hello Rust !!")
     }
 }
