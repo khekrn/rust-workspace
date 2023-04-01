@@ -3,5 +3,6 @@
 members = [
     "hello_rust",
     "atomic_chapter1",
-    "basics_ownership"
+    "basics_ownership",
+    "basics_part2"
 ]
