@@ -10,10 +10,10 @@ fn generate_random() -> i32 {
 
 fn flip_coin() -> CoinFlip {
     let random = generate_random();
-    if random % 2 == 0 {
-        return CoinFlip::Head;
+    return if random % 2 == 0 {
+        CoinFlip::Head
     } else {
-        return CoinFlip::Tail;
+        CoinFlip::Tail
     }
 }
 

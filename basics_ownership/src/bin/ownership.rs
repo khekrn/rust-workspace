@@ -44,10 +44,10 @@ fn copy_clone(){
 }
 
 fn max<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        return x;
-    }else{
-        return y;
+    return if x.len() > y.len() {
+        x
+    } else {
+        y
     }
 }
 
