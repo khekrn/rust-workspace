@@ -4,5 +4,6 @@ members = [
     "hello_rust",
     "atomic_chapter1",
     "basics_ownership",
-    "basics_part2"
+    "basics_part2",
+    "lesson_modules"
 ]
